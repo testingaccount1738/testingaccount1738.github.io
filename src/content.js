@@ -1,6 +1,6 @@
 window.siteContent = {
   profile: {
-    name: "Tom Brady",
+    name: "Bob Barker",
     role: "Fictional Academic Profile",
     intro:
       "I am a fictional doctoral researcher and public scholar studying leadership, elite performance, and how expertise changes under pressure. This proof-of-concept uses Tom Brady as a stand-in so the site feels fully populated now, while still giving us a clean structure we can later replace with your real work.",
