@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Swarm</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hud">
+        <div>
+          <p class="eyebrow">Browser Arcade Prototype</p>
+          <h1>Star Swarm</h1>
+          <p class="summary">
+            A Galaga-inspired mini shooter. Use arrow keys or A/D to move, and
+            press Space to fire.
+          </p>
+        </div>
+        <div class="controls">
+          <span>Move: Left / Right or A / D</span>
+          <span>Shoot: Space</span>
+          <span>Start / Restart: Enter</span>
+        </div>
+      </section>
+
+      <section class="cabinet">
+        <canvas
+          id="game"
+          width="900"
+          height="600"
+          aria-label="Star Swarm game canvas"
+        ></canvas>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>

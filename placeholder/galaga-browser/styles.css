@@ -1,0 +1,113 @@
+:root {
+  color-scheme: dark;
+  --bg-top: #09111f;
+  --bg-bottom: #03060f;
+  --panel: rgba(7, 12, 24, 0.84);
+  --panel-border: rgba(137, 221, 255, 0.22);
+  --text: #f3f6ff;
+  --muted: #9eb2d0;
+  --accent: #75f3ff;
+  --accent-strong: #ffd166;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(46, 88, 166, 0.35), transparent 40%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+}
+
+.shell {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.summary {
+  max-width: 48ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.controls {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  min-width: 250px;
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  background: var(--panel);
+  color: var(--muted);
+  box-shadow: var(--shadow);
+}
+
+.cabinet {
+  padding: 16px;
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, rgba(40, 83, 177, 0.22), transparent 30%),
+    linear-gradient(180deg, #060c18, #02040b 60%, #050914);
+}
+
+@media (max-width: 820px) {
+  .shell {
+    width: min(100vw - 20px, 1120px);
+    padding-top: 18px;
+  }
+
+  .hud {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .controls {
+    min-width: 0;
+  }
+
+  .cabinet {
+    padding: 10px;
+    border-radius: 18px;
+  }
+}
